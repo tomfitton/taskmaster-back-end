@@ -27,8 +27,8 @@ public class ErrorHandler {
 	private List<Error> processFieldErrors(List<FieldError> fieldErrors) {
 		List<Error> errors = new ArrayList<Error>();
 		for (FieldError fieldError : fieldErrors) {
-			String errorMessage = fieldError.getField() + " " + fieldError.getDefaultMessage(); 
-			errors.add(new Error(errorMessage));
+			Error error = new Error(fieldError.getField(), fieldError.getDefaultMessage());
+			errors.add(error);
 		}
 		return errors;
 	}
