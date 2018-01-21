@@ -22,5 +22,10 @@ public class DefaultBoardService implements BoardService {
 	public List<Board> getBoards() {
 		return boardRepository.findAll();
 	}
+	
+	@Override
+	public Board createBoard(Board board) {
+		return boardRepository.save(board);
+	}
 
 }

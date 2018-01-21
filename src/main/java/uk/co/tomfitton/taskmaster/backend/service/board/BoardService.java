@@ -8,4 +8,6 @@ public interface BoardService {
 
 	List<Board> getBoards();
 	
+	Board createBoard(Board board);
+	
 }
